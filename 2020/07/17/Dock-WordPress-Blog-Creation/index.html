@@ -5,13 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>Dock + WordPress Blog Creation | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="This Blog post is on how to use  Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.  InstallInstall Docker 12$ sudo apt install docker.io$ sudo apt install docker-compose  Add curre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dock + WordPress Blog Creation">
+<meta property="og:url" content="http://yoursite.com/2020/07/17/Dock-WordPress-Blog-Creation/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="This Blog post is on how to use  Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.  InstallInstall Docker 12$ sudo apt install docker.io$ sudo apt install docker-compose  Add curre">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-17T07:28:03.000Z">
+<meta property="article:modified_time" content="2020-07-20T04:23:11.090Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Dock-WordPress-Blog-Creation" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Dock-WordPress-Blog-Creation" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/17/Dock-WordPress-Blog-Creation/" class="article-date">
   <time datetime="2020-07-17T07:28:03.000Z" itemprop="datePublished">2020-07-17</time>
@@ -77,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/17/Dock-WordPress-Blog-Creation/">Dock + WordPress Blog Creation</a>
+    <h1 class="article-title" itemprop="name">
+      Dock + WordPress Blog Creation
     </h1>
   
 
@@ -124,185 +126,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-On-Hexo-Blog-Setup" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/17/On-Hexo-Blog-Setup/" class="article-date">
-  <time datetime="2020-07-17T06:21:51.000Z" itemprop="datePublished">2020-07-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/17/On-Hexo-Blog-Setup/">On Hexo Blog Setup</a>
-    </h1>
+    <a href="/2020/07/17/On-Hexo-Blog-Setup/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">On Hexo Blog Setup</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="This-Blog-post-is-on-how-to-create-hexo-blog-and-deploy-it-to-Github-the-first-time"><a href="#This-Blog-post-is-on-how-to-create-hexo-blog-and-deploy-it-to-Github-the-first-time" class="headerlink" title="This Blog post is on how to create hexo blog and deploy it to Github the first time"></a>This Blog post is on how to create hexo blog and deploy it to Github the first time</h2><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>I started with Ubuntu 18.04 LTS, which has to be upgraded to Ubuntu 20.04LTS for the newest versions of node.js and npm versions.  </p>
-<h3 id="Ubuntu-18-04-LTS-to-Ubuntu-20-04LTS-upgrade"><a href="#Ubuntu-18-04-LTS-to-Ubuntu-20-04LTS-upgrade" class="headerlink" title="Ubuntu 18.04 LTS to Ubuntu 20.04LTS upgrade"></a>Ubuntu 18.04 LTS to Ubuntu 20.04LTS upgrade</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update </span><br><span class="line">$ sudo apt upgrade</span><br><span class="line">$ sudo apt dist-upgrade</span><br><span class="line">$ sudo apt autoremove</span><br><span class="line">$ sudo apt install update-manager-core</span><br><span class="line">$ sudo <span class="keyword">do</span>-release-upgrade -d</span><br></pre></td></tr></table></figure>
-<p>Follow the prompt to upgrade.  Ubuntu upgrade in recent years become painless, especially for LTS upgrades</p>
-<h3 id="Install-related-software"><a href="#Install-related-software" class="headerlink" title="Install related software"></a>Install related software</h3><p>Install nodejs and npm</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install nodejs</span><br><span class="line">$ sudo apt-get install npm</span><br></pre></td></tr></table></figure>
-
-<p>To check nodejs and npm versions:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ nodejs -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-
-<p>Use npm to install hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<h3 id="How-to-start-to-create-hexo-Blog"><a href="#How-to-start-to-create-hexo-Blog" class="headerlink" title="How to start to create hexo Blog"></a>How to start to create hexo Blog</h3><p>Create and cd into the Blog folder with intended name</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir hexo_blog</span><br><span class="line">$ <span class="built_in">cd</span> hexo_blog</span><br></pre></td></tr></table></figure>
-
-<p>Initialize hexo.  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo hexo init</span><br></pre></td></tr></table></figure>
-<p>The “Hello World” Blog post will be generated as source/_posts/hello-world.md, you can open the source file </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi <span class="built_in">source</span>/_posts/hello-world.md</span><br></pre></td></tr></table></figure>
-<p>and compare with actual blog post by start hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-<p>to open <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> in the browser. </p>
-<p>To create a new Blog post, </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n <span class="string">"My First Blog Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>My-First-Blog-Post.md will be created under ource/_posts/.  </p>
-<p>Edit the md file according to the raw tutorial of hexo “Hello World” post.  </p>
-<h3 id="How-to-start-to-create-hexo-Blog-1"><a href="#How-to-start-to-create-hexo-Blog-1" class="headerlink" title="How to start to create hexo Blog"></a>How to start to create hexo Blog</h3><p>In github.com, create a respository named after your github.com username which can be found in upper left of “Settings” of github.  You can chang the user name in Account if the username is not taken. If username is abcd, the respository will be “<strong>abcd.github.io</strong>“</p>
-<p>Add github http link to _config.yml file:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/abcd/abcd.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>Use npm to install hexo git deployer</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p>May see </p>
-<p>If this is the first time using git on the Linux localhost, will need to set up git gmail address and name: </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email <span class="string">"abcd@gmail.com"</span></span><br><span class="line">$ git config --global user.name <span class="string">"abcd"</span></span><br></pre></td></tr></table></figure>
-
-<p>Deploy the hexo blog in localhost to github io respository:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>hexo blog is deployed in <a href="https://abcd.github.io" target="_blank" rel="noopener">https://abcd.github.io</a></p>
-<h3 id="How-to-install-hexo-theme-example"><a href="#How-to-install-hexo-theme-example" class="headerlink" title="How to install hexo theme example"></a>How to install hexo theme example</h3><p>Colone a theme from github</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
-<p>edit _config.yml file to change theme to downloaded theme, by change “theme:” value from landscape to yilia</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
-
-<p>Clean, Generate, and Start to preview new themes at locahost</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean;hexo g;hexo s</span><br></pre></td></tr></table></figure>
-<p>Deploy to git if theme looks OK.  </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/17/On-Hexo-Blog-Setup/" data-id="ckcvgvwal0003r4q7amh61y23" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-my-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/16/my-New-Post/" class="article-date">
-  <time datetime="2020-07-17T05:35:11.000Z" itemprop="datePublished">2020-07-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/16/my-New-Post/">Hexo blog first md trial</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1st-Chapter"><a href="#1st-Chapter" class="headerlink" title="1st Chapter"></a>1st Chapter</h2><p>Content</p>
-<hr>
-<h2 id="2nd-Chapter"><a href="#2nd-Chapter" class="headerlink" title="2nd Chapter"></a>2nd Chapter</h2><hr>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.youtube.com/watch?v=erKYtw4Rfhk&amp;list=WL&amp;index=40&amp;t=0s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=erKYtw4Rfhk&amp;list=WL&amp;index=40&amp;t=0s</a></p>
-<hr>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/16/my-New-Post/" data-id="ckcvgvwai0002r4q7c9plb5ga" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/16/hello-world/" class="article-date">
-  <time datetime="2020-07-17T05:22:32.344Z" itemprop="datePublished">2020-07-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/16/hello-world/" data-id="ckcvgvwa10001r4q77f121tbi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
