@@ -7,15 +7,15 @@
   
   <title>Dock + WordPress Blog Creation | Luke at Specs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This Blog post is on how to use  Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.  InstallInstall Docker 12$ sudo apt install docker.io$ sudo apt install docker-compose  Add curre">
+  <meta name="description" content="This Blog post is on how to use Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.   The benefit of using this method is having a dashboard to write blog directly on the server.  Bu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dock + WordPress Blog Creation">
 <meta property="og:url" content="http://yoursite.com/2020/07/17/Dock-WordPress-Blog-Creation/index.html">
 <meta property="og:site_name" content="Luke at Specs">
-<meta property="og:description" content="This Blog post is on how to use  Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.  InstallInstall Docker 12$ sudo apt install docker.io$ sudo apt install docker-compose  Add curre">
+<meta property="og:description" content="This Blog post is on how to use Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.   The benefit of using this method is having a dashboard to write blog directly on the server.  Bu">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-17T07:28:03.000Z">
-<meta property="article:modified_time" content="2020-07-20T04:23:11.090Z">
+<meta property="article:modified_time" content="2020-09-05T20:41:26.285Z">
 <meta property="article:author" content="Luke at Specs">
 <meta name="twitter:card" content="summary">
   
@@ -88,7 +88,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="This-Blog-post-is-on-how-to-use-Docker-to-create-WordPress-Blog-WordPress-is-Dynamic-Blog-using-PHP"><a href="#This-Blog-post-is-on-how-to-use-Docker-to-create-WordPress-Blog-WordPress-is-Dynamic-Blog-using-PHP" class="headerlink" title="This Blog post is on how to use  Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.  "></a>This Blog post is on how to use  Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.  </h2><h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>Install Docker</p>
+        <p>This Blog post is on how to use Docker to create WordPress Blog. WordPress is Dynamic Blog using PHP.  </p>
+<p>The benefit of using this method is having a dashboard to write blog directly on the server.  But ofcours, if I do that, I need to use git to update, or else we have a branch?  </p>
+<hr>
+<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>Install Docker</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install docker.io</span><br><span class="line">$ sudo apt install docker-compose</span><br></pre></td></tr></table></figure>
 
 <p>Add current user to docker user group, logout and log in the host again.</p>
@@ -112,10 +115,13 @@
 
 <p>Use docker ps to check if wordpress and mysql is running or not.  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES</span><br><span class="line">ce8cdfc63127        wordpress:latest    <span class="string">"docker-entrypoint.s…"</span>   20 minutes ago      Up 13 minutes       0.0.0.0:8000-&gt;80/tcp   wp_blog_wordpress_1</span><br><span class="line">82813834d251        mysql:5.7           <span class="string">"docker-entrypoint.s…"</span>   21 minutes ago      Up 13 minutes       3306/tcp, 33060/tcp    wp_blog_db_1</span><br></pre></td></tr></table></figure>
-<p>Open Brower and enter “<a href="http://localhost:8000&quot;">http://localhost:8000&quot;</a>, WordPress should be running on port 8000 of your Docker Host</p>
-<p>Follow the WordPress installation instruciton, the admin dashboard will appear.  </p>
-<h3 id="how-to-depoly-docker-local-hosted-WordPress-blog-into-Github"><a href="#how-to-depoly-docker-local-hosted-WordPress-blog-into-Github" class="headerlink" title="how to depoly docker local hosted WordPress blog into Github?"></a>how to depoly docker local hosted WordPress blog into Github?</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/compose/wordpress/" target="_blank" rel="noopener">https://docs.docker.com/compose/wordpress/</a></p>
-<p><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">https://docs.docker.com/get-started/</a></p>
+<p>Open Brower and enter <a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a> WordPress should be running on port 8000 of your Docker Host</p>
+<p>Follow the WordPress installation instruction, the admin dashboard will appear.  </p>
+<h3 id="Shutdown-and-cleanup"><a href="#Shutdown-and-cleanup" class="headerlink" title="Shutdown and cleanup"></a>Shutdown and cleanup</h3><p>The command docker-compose down removes the containers and default network, but preserves your WordPress database.</p>
+<p>The command docker-compose down –volumes removes the containers, default network, and the WordPress database.</p>
+<h3 id="How-to-depoly-docker-local-hosted-WordPress-blog-into-Github"><a href="#How-to-depoly-docker-local-hosted-WordPress-blog-into-Github" class="headerlink" title="How to depoly docker local hosted WordPress blog into Github?"></a>How to depoly docker local hosted WordPress blog into Github?</h3><p>Similar to hexo blog deployment, just commit to git.<br>here is a reference.  </p>
+<p>As having hexo static blog satisfy what I need so far, I will just leave this option here for now.  </p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">https://docs.docker.com/get-started/</a><br><a href="https://docs.docker.com/compose/wordpress/" target="_blank" rel="noopener">https://docs.docker.com/compose/wordpress/</a><br><a href="https://www.dreamhost.com/wordpress/how-to-use-wp-with-github/" target="_blank" rel="noopener">https://www.dreamhost.com/wordpress/how-to-use-wp-with-github/</a><br><a href="https://45royale.com/blog/wordpress-github/" target="_blank" rel="noopener">https://45royale.com/blog/wordpress-github/</a></p>
 
       
     </div>
