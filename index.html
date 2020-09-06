@@ -117,8 +117,9 @@
 <p>Follow the WordPress installation instruction, the admin dashboard will appear.  </p>
 <h3 id="Shutdown-and-cleanup"><a href="#Shutdown-and-cleanup" class="headerlink" title="Shutdown and cleanup"></a>Shutdown and cleanup</h3><p>The command docker-compose down removes the containers and default network, but preserves your WordPress database.</p>
 <p>The command docker-compose down –volumes removes the containers, default network, and the WordPress database.</p>
-<h3 id="How-to-depoly-docker-local-hosted-WordPress-blog-into-Github"><a href="#How-to-depoly-docker-local-hosted-WordPress-blog-into-Github" class="headerlink" title="How to depoly docker local hosted WordPress blog into Github?"></a>How to depoly docker local hosted WordPress blog into Github?</h3><p>Similar to hexo blog deployment, just commit to git.<br>here is a reference.  </p>
-<p>As having hexo static blog satisfy what I need so far, I will just leave this option here for now.  </p>
+<h3 id="How-to-depoly-docker-local-hosted-WordPress-blog-into-Github"><a href="#How-to-depoly-docker-local-hosted-WordPress-blog-into-Github" class="headerlink" title="How to depoly docker local hosted WordPress blog into Github?"></a>How to depoly docker local hosted WordPress blog into Github?</h3><p>Similar to hexo blog deployment, just commit to git.<br>Some reference link are in Reference page.  </p>
+<p>I have tried with localhost, managing theme is not friendly to someone who is not familiar with .css style especially with downloaded themes which you prefred. On the other end, having hexo static blog satisfy what I need so far, but the only option missing is the comments which should not matter right now as long as email address is previded. </p>
+<p> I will just leave this option here for now.  </p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">https://docs.docker.com/get-started/</a><br><a href="https://docs.docker.com/compose/wordpress/" target="_blank" rel="noopener">https://docs.docker.com/compose/wordpress/</a><br><a href="https://www.dreamhost.com/wordpress/how-to-use-wp-with-github/" target="_blank" rel="noopener">https://www.dreamhost.com/wordpress/how-to-use-wp-with-github/</a><br><a href="https://45royale.com/blog/wordpress-github/" target="_blank" rel="noopener">https://45royale.com/blog/wordpress-github/</a></p>
 
       
@@ -183,7 +184,7 @@
 
 <p>My-First-Blog-Post.md will be created under ource/_posts/.  </p>
 <p>Edit the md file according to the raw tutorial of hexo “Hello World” post.  </p>
-<h3 id="How-to-setup-git-account-to-deply-hexo-Blog"><a href="#How-to-setup-git-account-to-deply-hexo-Blog" class="headerlink" title="How to setup git account to deply hexo Blog"></a>How to setup git account to deply hexo Blog</h3><p>In github.com, create a respository named after your github.com username which can be found in upper left of “Settings” of github.  You can chang the user name in Account if the username is not taken. If username is abcd, the respository will be “<strong>abcd.github.io</strong>“</p>
+<h3 id="How-to-setup-git-account-to-deply-hexo-Blog"><a href="#How-to-setup-git-account-to-deply-hexo-Blog" class="headerlink" title="How to setup git account to deply hexo Blog"></a>How to setup git account to deply hexo Blog</h3><p>In github.com, create a respository named after your github.com username which can be found in upper left of “Settings” of github.  You can chang the user name in Account if the username is not taken. If username is abcd, the respository will be “<strong>abcd.github.io</strong>“hexo</p>
 <p>Add github http link to _config.yml file:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/abcd/abcd.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
@@ -204,6 +205,7 @@
 <p>Clean, Generate, and Start to preview new themes at locahost</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean;hexo g;hexo s</span><br></pre></td></tr></table></figure>
 <p>Deploy to git if theme looks OK.  </p>
+<h3 id="How-to-install-hexo-theme-example-1"><a href="#How-to-install-hexo-theme-example-1" class="headerlink" title="How to install hexo theme example"></a>How to install hexo theme example</h3><p>One comment is that hexo blog has various ways of getting a comment section, which is not provided by default.  </p>
 
       
     </div>
